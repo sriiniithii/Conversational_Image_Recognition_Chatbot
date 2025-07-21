@@ -2,7 +2,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai"
 import { type NextRequest, NextResponse } from "next/server"
 
 const initializeGeminiAI = () => {
-  const apiKey = "AIzaSyA6G0_t5URSl0yF30sJbbzl3VStUbw4XYY"
+  const apiKey = process.env.GEMINI_API_KEY
   if (!apiKey) {
     throw new Error("GEMINI_API_KEY is not configured")
   }
